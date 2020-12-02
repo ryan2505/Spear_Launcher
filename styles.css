@@ -69,13 +69,13 @@ body {
     
 }
 
+/***********************CANNON***********************/
+
 path {
         -webkit-animation: shot 0.8s ease 0s 1 alternate;
                 animation: shot 0.8s ease-in 0s 1 normal;
+        
 }
-
-
-
 
 
 @-webkit-keyframes shot {
