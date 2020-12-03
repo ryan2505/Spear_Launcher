@@ -23,37 +23,25 @@
             <div class = "top"></div>
             <div class = "middle">
                 <svg width="200" height="200">
-                    <lineargradient id=""></lineargradient>
-                    <path  fill = "#BDBDBD" stroke ="red" stroke-width = "3" stroke-linejoin = "round"
-                    d=" M 50,150 
-                        H 150 
-                        V 125
-                        L 198.3, 112.06
-                        L 185.8, 65.41
-                        L 150, 75
-                        V 50
-                        H 50 Z
-                        M 65,150
-                        L 58.53, 174.15
-                        H 73.53
-                        L 80,150
-                        M 120,150
-                        L 126.47, 174.15
-                        H 141.47
-                        L 135, 150
-                        M 150, 125
-                        Q 129.39,105.55 150,75
-                        M 198.3,112.06
-                        Q 171.37,94.28 185.8,65.41  " />
-                    <g fill = "red" stroke = "blue" stroke-width = "3" stroke-linejoin = "round">
-                        <path d = "M65,150 L58.53,174.15 H73.53 L80,150 Z"></path>
-                        <path d = "M120,150 L126.47,174.15 H141.47 L135,150 Z"></path>
-                        <path d = "M150,50 H50 V150 H150 V125 Q129.39,105.55 150,75 Z"></path>
-                        <path d = "M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path>
-                        <path d = "M185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path>
+                    <filter id="blurme">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5"/> <!--don't know how to use this yet-->
+                    </filter>
+                    <lineargradient id="legs" gradientTransform = "rotate(90)" gradientUnits = "objectboundingbox">
+                        <stop offset = "35%" stop-color = "#000"/>
+                        <stop offset = "65%" stop-color = "#757575"/>
+                    </lineargradient>
+                    <path fill="#000" stroke = "none" d = "M185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path> <!--dark cannon hole spot-->
+                    <path fill="#212121" stroke = "#212121" stroke-width = "3" stroke-linejoin = "round" d = "M150,50 H50 V150 H150 V125 Q129.39,105.55 150,75 Z"></path> <!--big square body-->
+                    <path fill = "red" stroke = "blue" stroke-width = "3" stroke-linejoin = "round" d = "M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path> <!--little firing tube-->
+                    <g fill = "url('#legs')" stroke = "url('#legs')" stroke-width = "3" stroke-linejoin = "round">
+                        <path d = "M65,150 L58.53,174.15 H73.53 L80,150 Z"></path> <!--left leg-->
+                        <path d = "M120,150 L126.47,174.15 H141.47 L135,150 Z"></path> <!--right leg-->
                         <circle cx="129.39" cy="105.55" r="0.5"></circle>
                         <circle cx="171.37" cy="94.28" r="0.5"></circle>
-
+                    </g>
+                    <g fill = "red" stroke = "blue" stroke-width = "3" stroke-linejoin = "round">
+                        <circle cx="129.39" cy="105.55" r="0.5"></circle>
+                        <circle cx="171.37" cy="94.28" r="0.5"></circle>
                     </g>
                 </svg>
             </div>
