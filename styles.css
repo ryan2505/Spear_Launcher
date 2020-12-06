@@ -50,92 +50,64 @@ body {
         background-color: #000;
 }
 
-
-.first_square {
-    position: relative;
-    text-align: justify;
-    content: "hello";
-    width: 10%;
-    height: 10%;
-    background-color: red;
-    -webkit-animation-name: example;
-            animation-name: example;
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    
-}
-
 /***********************CANNON***********************/
 
-path {
+#little_firing_cannon {
         -webkit-animation: shot 0.8s ease 0s 1 alternate;
                 animation: shot 0.8s ease-in 0s 1 normal;
         
 }
 
+#dark_cannon_hole {
+        -webkit-animation: shot_2 0.8s ease-in 0s 1 normal;
+                animation: shot_2 0.8s ease-in 0s 1 normal;
+}
 
 @-webkit-keyframes shot {
         0%{
-                d: path("M50,150 H150 V125 L198.3,112.06 L185.8,65.41 L150,75 V50 H50 Z M65,150 L58.53, 174.15 H73.53 L80,150 M120,150 L126.47, 174.15 H141.47 L135, 150 M150, 125 Q129.39,105.55 150,75 M198.3, 112.06 Q171.37,94.28 185.8,65.41")
+                d: path("M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z")
         }
         50%{
-                d: path("M50,150 H150 V125 L188.64,114.65 L176.14,68 L150,75 V50 H50 Z M65,150 L58.53, 174.15 H73.53 L80,150 M120,150 L126.47, 174.15 H141.47 L135, 150 M150, 125 Q129.39,105.55 150,75 M188.64,114.65 Q161.71,96.86 176.14,68")
+                d: path("M150,125 Q129.39,105.55 150,75 L176.14,68 Q161.7,96.86 188.64,114.65 Z")
         }
         100%{
-                d: path("M50,150 H150 V125 L198.3,112.06 L185.8,65.41 L150,75 V50 H50 Z M65,150 L58.53, 174.15 H73.53 L80,150 M120,150 L126.47, 174.15 H141.47 L135, 150 M150, 125 Q129.39,105.55 150,75 M198.3, 112.06 Q171.37,94.28 185.8,65.41")
+                d: path("M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z")
         }
 }
-
-
-
-
 
 @keyframes shot {
         0%{
-                d: path("M50,150 H150 V125 L198.3,112.06 L185.8,65.41 L150,75 V50 H50 Z M65,150 L58.53, 174.15 H73.53 L80,150 M120,150 L126.47, 174.15 H141.47 L135, 150 M150, 125 Q129.39,105.55 150,75 M198.3, 112.06 Q171.37,94.28 185.8,65.41")
+                d: path("M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z")
         }
         50%{
-                d: path("M50,150 H150 V125 L188.64,114.65 L176.14,68 L150,75 V50 H50 Z M65,150 L58.53, 174.15 H73.53 L80,150 M120,150 L126.47, 174.15 H141.47 L135, 150 M150, 125 Q129.39,105.55 150,75 M188.64,114.65 Q161.71,96.86 176.14,68")
+                d: path("M150,125 Q129.39,105.55 150,75 L176.14,68 Q161.7,96.86 188.64,114.65 Z")
         }
         100%{
-                d: path("M50,150 H150 V125 L198.3,112.06 L185.8,65.41 L150,75 V50 H50 Z M65,150 L58.53, 174.15 H73.53 L80,150 M120,150 L126.47, 174.15 H141.47 L135, 150 M150, 125 Q129.39,105.55 150,75 M198.3, 112.06 Q171.37,94.28 185.8,65.41")
+                d: path("M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z")
         }
 }
 
+@-webkit-keyframes shot_2 {
+        0%{
+                d: path("M185.8,65.41 Q171.37,94.28 198.3,112.06 Z")
+        }
+        50%{
+                d: path("M176.14,68 Q161.7,96.86 188.64,114.65 Z") 
+        }
+        100%{
+                d: path("M185.8,65.41 Q171.37,94.28 198.3,112.06 Z")
+        }
+}
 
-
-/*                d: path("M50,150 H150 V125 L198.3,112.06 L185.8,65.41 L150,75 V50 H50 Z M65,150 L58.53, 174.15 H73.53 L80,150 M120,150 L126.47, 174.15 H141.47 L135, 150 M150, 125 Q129.39,105.55 150,75 M198.3, 112.06 Q171.37,94.28 185.8,65.41")
-*/
-
-
-
-
-
-@-webkit-keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:100%; top:0px;}
-    50%  {background-color:blue; left:100%; top:100%;}
-    75%  {background-color:green; left:0px; top:100%;}
-    100% {background-color:red; left:0px; top:0px;}
-  }
-
-
-
-
-
-
-
-
-
-@keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:90%; top:0px;}
-    50%  {background-color:blue; left:90%; top:90%;}
-    75%  {background-color:green; left:0px; top:90%;}
-    100% {background-color:red; left:0px; top:0px;}
-  }
+@keyframes shot_2 {
+        0%{
+                d: path("M185.8,65.41 Q171.37,94.28 198.3,112.06 Z")
+        }
+        50%{
+                d: path("M176.14,68 Q161.7,96.86 188.64,114.65 Z") 
+        }
+        100%{
+                d: path("M185.8,65.41 Q171.37,94.28 198.3,112.06 Z")
+        }
+}
 

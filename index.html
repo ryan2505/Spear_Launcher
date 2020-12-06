@@ -23,21 +23,20 @@
             <div class = "top"></div>
             <div class = "middle">
                 <svg width="200" height="200">
-                    <filter id="blurme">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="5"/> <!--don't know how to use this yet-->
-                    </filter>
                     <lineargradient id="legs" gradientTransform = "rotate(90)" gradientUnits = "objectboundingbox">
-                        <stop offset = "35%" stop-color = "#000"/>
-                        <stop offset = "65%" stop-color = "#757575"/>
+                        <stop offset = "15%" stop-color = "#000"/>
+                        <stop offset = "85%" stop-color = "#757575"/>
                     </lineargradient>
-                    <path fill="#000" stroke = "none" d = "M185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path> <!--dark cannon hole spot-->
+                    <lineargradient id="cannon" gradientUnits = "objectboundingbox">
+                        <stop offset = "15%" stop-color = "#000"/>
+                        <stop offset = "85%" stop-color = "#424242"/>
+                    </lineargradient>
+                    <path id = "dark_cannon_hole" fill="#000" stroke = "#000" stroke-width = "3" stroke-linejoin = "round" d = "M185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path> <!--dark cannon hole spot-->
                     <path fill="#212121" stroke = "#212121" stroke-width = "3" stroke-linejoin = "round" d = "M150,50 H50 V150 H150 V125 Q129.39,105.55 150,75 Z"></path> <!--big square body-->
-                    <path fill = "red" stroke = "blue" stroke-width = "3" stroke-linejoin = "round" d = "M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path> <!--little firing tube-->
+                    <path id = "little_firing_cannon" fill = "url('#cannon')" stroke = "url('#cannon')" stroke-width = "3" stroke-linejoin = "round" d = "M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path> <!--little firing tube-->
                     <g fill = "url('#legs')" stroke = "url('#legs')" stroke-width = "3" stroke-linejoin = "round">
                         <path d = "M65,150 L58.53,174.15 H73.53 L80,150 Z"></path> <!--left leg-->
                         <path d = "M120,150 L126.47,174.15 H141.47 L135,150 Z"></path> <!--right leg-->
-                        <circle cx="129.39" cy="105.55" r="0.5"></circle>
-                        <circle cx="171.37" cy="94.28" r="0.5"></circle>
                     </g>
                     <g fill = "red" stroke = "blue" stroke-width = "3" stroke-linejoin = "round">
                         <circle cx="129.39" cy="105.55" r="0.5"></circle>
