@@ -50,6 +50,9 @@ body {
 .bottom {
         height: 25%;
         background-color: #000;
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
 }
 
 /***********************CANNON***********************/
@@ -59,13 +62,13 @@ svg {
         margin-top: 40%;
 }
 
-#little_firing_cannon {
+#little_firing_cannon.animation {
         -webkit-animation: shot 0.8s ease 0s 1 alternate;
                 animation: shot 0.8s ease-in 0s 1 normal;
         
 }
 
-#dark_cannon_hole {
+#dark_cannon_hole.animation_2 {
         -webkit-animation: shot_2 0.8s ease-in 0s 1 normal;
                 animation: shot_2 0.8s ease-in 0s 1 normal;
 }
@@ -130,7 +133,7 @@ button {
         font-size: 1.5em;
         font-weight: 100;
         display: inline-block;
-        margin: 50px auto;
+        margin: 55px auto;
         text-decoration: none;
         text-align: center;
         padding:  1.1rem 2rem;
@@ -146,9 +149,7 @@ button {
 
 button:hover {
         background-color: #DD001F;
-        border: 3px solid #DD001F;
-
-        
+        border: 3px solid #DD001F;       
 }
 
 button:focus {
@@ -181,6 +182,7 @@ button:focus::after {
             -ms-transform: skew(0, 20deg);
                 transform: skew(0, 20deg);
 }
+
 
 @-webkit-keyframes bounce {
         to{bottom: 4.5rem;}

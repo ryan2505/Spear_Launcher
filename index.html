@@ -14,6 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet"> 
     
     <title>Spear Laucher</title>
+
+    <script type="text/javascript">
+    document.querySelector('.little').onclick=function() {
+        var d = document.getElementById("little_firing_cannon");
+        d.className = d.className + "animation";
+
+    }
+
+    </script>
 </head>
 <body>
     <header>
@@ -35,7 +44,10 @@
                     </lineargradient>
                     <path id = "dark_cannon_hole" fill="#000" stroke = "#000" stroke-width = "3" stroke-linejoin = "round" d = "M185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path> <!--dark cannon hole spot-->
                     <path fill="#212121" stroke = "#212121" stroke-width = "3" stroke-linejoin = "round" d = "M150,50 H50 V150 H150 V125 Q129.39,105.55 150,75 Z"></path> <!--big square body-->
-                    <path id = "little_firing_cannon" fill = "url('#cannon')" stroke = "url('#cannon')" stroke-width = "3" stroke-linejoin = "round" d = "M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path> <!--little firing tube-->
+                    <path id = "little_firing_cannon" fill = "url('#cannon')" stroke = "url('#cannon')" stroke-width = "3" stroke-linejoin = "round" d = "M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z"> <!--little firing tube-->
+                    <animate attributeType = "XML" attributeName = "d"  values = "M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z;M150,125 Q129.39,105.55 150,75 L176.14,68 Q161.7,96.86 188.64,114.65 Z;M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z"
+                        dur = "0.8s" repeatCount = "1" begin = "click"/>
+                    </path>
                     <g fill = "url('#legs')" stroke = "url('#legs')" stroke-width = "3" stroke-linejoin = "round">
                         <path d = "M65,150 L58.53,174.15 H73.53 L80,150 Z"></path> <!--left leg-->
                         <path d = "M120,150 L126.47,174.15 H141.47 L135,150 Z"></path> <!--right leg-->
@@ -47,7 +59,7 @@
                 </svg>
             </div>
             <div class = "bottom">
-                <button type="button">FIRE!</button>
+                <button type="button" id="test">FIRE!</button>
                 <button type="button">RESET</button>
             </div>
         </div>
