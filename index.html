@@ -42,11 +42,14 @@
                         <stop offset = "15%" stop-color = "#000"/>
                         <stop offset = "85%" stop-color = "#424242"/>
                     </lineargradient>
-                    <path id = "dark_cannon_hole" fill="#000" stroke = "#000" stroke-width = "3" stroke-linejoin = "round" d = "M185.8,65.41 Q171.37,94.28 198.3,112.06 Z"></path> <!--dark cannon hole spot-->
+                    <path id = "dark_cannon_hole" fill="#000" stroke = "#000" stroke-width = "3" stroke-linejoin = "round" d = "M185.8,65.41 Q171.37,94.28 198.3,112.06 Z">
+                        <animate attributeType = "XML" attributeName = "d" values = "M185.8,65.41 Q171.37,94.28 198.3,112.06 Z;M176.14,68 Q161.7,96.86 188.64,114.65 Z;M185.8,65.41 Q171.37,94.28 198.3,112.06 Z"
+                        dur = "0.8s" repeatCount = "1" begin = "cannon_ani.begin" restart = "whenNotActive"/>
+                    </path> <!--dark cannon hole spot-->
                     <path fill="#212121" stroke = "#212121" stroke-width = "3" stroke-linejoin = "round" d = "M150,50 H50 V150 H150 V125 Q129.39,105.55 150,75 Z"></path> <!--big square body-->
                     <path id = "little_firing_cannon" fill = "url('#cannon')" stroke = "url('#cannon')" stroke-width = "3" stroke-linejoin = "round" d = "M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z"> <!--little firing tube-->
-                    <animate attributeType = "XML" attributeName = "d"  values = "M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z;M150,125 Q129.39,105.55 150,75 L176.14,68 Q161.7,96.86 188.64,114.65 Z;M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z"
-                        dur = "0.8s" repeatCount = "1" begin = "click"/>
+                    <animate id = "cannon_ani" attributeType = "XML" attributeName = "d"  values = "M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z;M150,125 Q129.39,105.55 150,75 L176.14,68 Q161.7,96.86 188.64,114.65 Z;M150,125 Q129.39,105.55 150,75 L185.8,65.41 Q171.37,94.28 198.3,112.06 Z"
+                        dur = "0.8s" repeatCount = "1" begin = "click" restart = "whenNotActive"/> <!--xlink:href="little_firing_cannon" not required because the animate tag is nested-->
                     </path>
                     <g fill = "url('#legs')" stroke = "url('#legs')" stroke-width = "3" stroke-linejoin = "round">
                         <path d = "M65,150 L58.53,174.15 H73.53 L80,150 Z"></path> <!--left leg-->
